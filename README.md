@@ -4,10 +4,12 @@ Tela principal do aplicativo da Netflix feita usando SwiftUI com MVVM e a [API d
 ## Screenshots
 <p align="center">
     <img src="https://user-images.githubusercontent.com/16376748/107993571-80795400-6fb9-11eb-96ab-a7a85827b2a5.png" width="400">&nbsp;
+    <img src="https://user-images.githubusercontent.com/16376748/109396656-5b69d700-7911-11eb-87c4-f2a9f00a23dc.png" width="200">&nbsp;
 </p>
 
 ## Vídeos
 - [Vídeo no YouTube](https://youtu.be/Ym1OFZb2lu0)
+- [Vídeo no YouTube - Parte 2](https://youtu.be/08i1K8ucTgY)
 
 ## Requisitos
 - iOS 14
@@ -21,8 +23,3 @@ Tela principal do aplicativo da Netflix feita usando SwiftUI com MVVM e a [API d
 - Twitter: [https://twitter.com/rphlfc](https://twitter.com/rphlfc)
 - Website: [https://rphlfc.github.io](https://rphlfc.github.io)
 - Youtube: [https://www.youtube.com/channel/UC7UXnCqiqsV4R9lCwKh-rwg](https://www.youtube.com/channel/UC7UXnCqiqsV4R9lCwKh-rwg)
-
-
-
-
-

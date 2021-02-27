@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct FeaturedView: View {
-    @StateObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     var body: some View {
         WebImage(url: URL(string: "\(Constants.imagesBaseUrl)\(viewModel.items?[0].poster_path ?? "")"))
@@ -83,7 +83,7 @@ struct FeaturedView: View {
 
 struct FeaturedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedView()
+        FeaturedView(viewModel: HomeViewModel())
             .background(Color.black)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct ThumbsView: View {
-    @StateObject var viewModel = HomeViewModel()
+    @ObservedObject var viewModel: HomeViewModel
     
     var title: String
     var endpoint: String
@@ -29,7 +29,7 @@ struct ThumbsView: View {
             ScrollView(.horizontal, showsIndicators: false, content: {
                 HStack(spacing: 15) {
                     ForEach(viewModel.items ?? viewModel.placeholders) { item in
-                        Button(action: {}, label: {
+                        NavigationLink(destination: DetailsView(item: item), label: {
                             WebImage(url: URL(string: "\(Constants.imagesBaseUrl)\(item.poster_path ?? "")")!)
                                 .resizable()
                                 .frame(width: 160)
@@ -52,7 +52,7 @@ struct ThumbsView: View {
 
 struct TVShowsView_Previews: PreviewProvider {
     static var previews: some View {
-        ThumbsView(title: "TV Shows", endpoint: "/discover/tv?api_key=\(Constants.apiKey)&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1")
+        ThumbsView(viewModel: HomeViewModel(), title: "TV Shows", endpoint: "/discover/tv?api_key=\(Constants.apiKey)&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=1")
             .background(Color.black)
     }
 }
